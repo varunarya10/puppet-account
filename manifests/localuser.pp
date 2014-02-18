@@ -11,9 +11,6 @@ define account::localuser(
     ensure     => present,
     comment    => $realname,
     gid        => $title,
-    groups     => [
-      'sudo',
-    ],
     home       => "/home/${title}",
     managehome => true,
     membership => 'minimum',
