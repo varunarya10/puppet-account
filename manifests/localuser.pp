@@ -35,6 +35,5 @@ define account::localuser(
     name    => "/home/${title}/.ssh/authorized_keys",
     owner   => $title,
     require => File["${title}_sshdir"],
-
   }
 }
