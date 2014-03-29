@@ -37,3 +37,4 @@ define account::localuser(
     require => File["${title}_sshdir"],
   }
 }
+
