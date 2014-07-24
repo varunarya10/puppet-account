@@ -1,6 +1,7 @@
 define account::localuser(
   $realname,
   $sshkeys = '',
+  $password = '*',
   $shell = '/bin/bash'
 ) {
   group { $title:
@@ -13,6 +14,7 @@ define account::localuser(
     gid        => $title,
     home       => "/home/${title}",
     managehome => true,
+    password => $password,
     membership => 'minimum',
     require    => Group[$title],
     shell      => $shell,
